@@ -3461,1146 +3461,305 @@ min-height: 100vh;
   }
 
 }
-
-/* ==========================================
+/* =========================================================
    EGTV SCHEDULE
-========================================== */
+========================================================= */
 
-.egtv-schedule {
-  position: relative;
-
-  padding: 100px 20px;
-
-  overflow: hidden;
-
-  color: #fff;
-
-  background:
-    radial-gradient(
-      circle at 85% 5%,
-      rgba(139,82,190,0.16),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 10% 70%,
-      rgba(231,187,88,0.06),
-      transparent 30%
-    ),
-    #0b0713;
+.egtv-schedule-section {
+    position: relative;
+    padding: 110px 20px;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(139, 82, 190, 0.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(231, 187, 88, 0.08),
+            transparent 30%
+        ),
+        #0d0a12;
+    color: #fff;
+    overflow: hidden;
 }
-
 
 .egtv-schedule-container {
-  width: min(1180px, 100%);
-
-  margin: auto;
+    width: min(1250px, 100%);
+    margin: 0 auto;
 }
 
 
-/* ==========================================
-   HEADER
-========================================== */
+/* ---------------------------------------------------------
+   HEADING
+--------------------------------------------------------- */
 
-.egtv-schedule-header {
-  max-width: 720px;
+.egtv-schedule-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 65px;
+}
 
-  margin: 0 auto 55px;
+.egtv-schedule-heading span {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #e7bb58;
+}
 
-  text-align: center;
+.egtv-schedule-heading h2 {
+    margin: 0;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+    font-weight: 400;
+    color: #fff;
+}
+
+.egtv-schedule-heading h2 strong {
+    color: #e7bb58;
+    font-weight: 600;
+}
+
+.egtv-schedule-heading p {
+    margin: 20px auto 0;
+    max-width: 580px;
+    color: rgba(255,255,255,0.62);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 
-.egtv-schedule-tag {
-  display: inline-flex;
+/* ---------------------------------------------------------
+   GRID
+--------------------------------------------------------- */
 
-  align-items: center;
-  gap: 12px;
-
-  color: #e7bb58;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 3px;
+.egtv-schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
 }
 
 
-.egtv-schedule-tag::before,
-.egtv-schedule-tag::after {
-  content: "";
-
-  width: 30px;
-  height: 1px;
-
-  background: #e7bb58;
-}
-
-
-.egtv-schedule-header h1 {
-  margin: 18px 0 15px;
-
-  font-size: clamp(40px, 5vw, 62px);
-
-  line-height: 1.05;
-
-  letter-spacing: -1.5px;
-}
-
-
-.egtv-schedule-header h1 span {
-  color: #e7bb58;
-}
-
-
-.egtv-schedule-header p {
-  margin: 0;
-
-  color: #958da0;
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-
-/* ==========================================
-   LIVE CARD
-========================================== */
-
-.egtv-live-card {
-  position: relative;
-
-  min-height: 330px;
-
-  display: flex;
-
-  align-items: center;
-
-  overflow: hidden;
-
-  margin-bottom: 30px;
-
-  border: 1px solid
-    rgba(231,187,88,0.22);
-
-  border-radius: 24px;
-
-  background: #171020;
-}
-
-
-.egtv-live-image {
-  position: absolute;
-
-  inset: 0;
-
-  background-size: cover;
-  background-position: center;
-
-  opacity: 0.65;
-}
-
-
-.egtv-live-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-   linear-gradient(90deg, rgba(11, 7, 19, 0.96) 0%, rgb(11 7 19 / 0%) 45%, rgb(11 7 19 / 6%) 100%);
-
-    
-}
-
-
-.egtv-live-content {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 600px;
-
-  padding: 50px;
-}
-
-
-.egtv-live-badge {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  margin-bottom: 15px;
-
-  color: #e7bb58;
-
-  font-size: 11px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.egtv-live-badge span {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #e7bb58;
-
-  box-shadow:
-    0 0 0 5px rgba(231,187,88,0.12);
-}
-
-
-.egtv-live-time {
-  margin-bottom: 7px;
-
-  color: #958da0;
-
-  font-size: 12px;
-}
-
-
-.egtv-live-content h2 {
-  margin: 0 0 10px;
-
-  font-size: clamp(30px, 4vw, 46px);
-
-  line-height: 1.1;
-}
-
-
-.egtv-live-content p {
-  max-width: 500px;
-
-  margin: 0 0 25px;
-
-  color: #aaa2b5;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-
-/* WATCH BUTTON */
-
-.egtv-watch-btn {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  padding: 13px 22px;
-
-  border-radius: 30px;
-
-  color: #17101f;
-
-  background: #e7bb58;
-
-  font-size: 11px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-
-  transition: 0.3s ease;
-}
-
-
-.egtv-watch-btn:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 10px 30px rgba(231,187,88,0.18);
-}
-
-
-.egtv-watch-btn span {
-  font-size: 16px;
-}
-
-
-/* ==========================================
-   DAY SELECTOR
-========================================== */
-
-.egtv-day-selector {
-  display: grid;
-
-  grid-template-columns:
-    35px repeat(7, 1fr) 35px;
-
-  gap: 7px;
-
-  margin-bottom: 45px;
-
-  padding: 8px;
-
-  border: 1px solid
-    rgba(255,255,255,0.07);
-
-  border-radius: 18px;
-
-  background:
-    rgba(255,255,255,0.025);
-}
-
-
-.egtv-day,
-.egtv-day-arrow {
-  position: relative;
-
-  border: 0;
-
-  cursor: pointer;
-
-  border-radius: 12px;
-
-  background: transparent;
-
-  color: #81798c;
-
-  transition: 0.25s ease;
-}
-
-
-.egtv-day {
-  min-height: 70px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 3px;
-}
-
-
-.egtv-day span {
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-}
-
-
-.egtv-day strong {
-  color: #fff;
-
-  font-size: 19px;
-}
-
-
-.egtv-day small {
-  color: #e7bb58;
-
-  font-size: 8px;
-
-  font-weight: 800;
-}
-
-
-.egtv-day:hover {
-  background:
-    rgba(139,82,190,0.12);
-
-  color: #fff;
-}
-
-
-.egtv-day.active {
-  color: #17101f;
-
-  background: #e7bb58;
-}
-
-
-.egtv-day.active strong,
-.egtv-day.active small {
-  color: #17101f;
-}
-
-
-.egtv-day-arrow {
-  font-size: 25px;
-}
-
-
-.egtv-day-arrow:hover {
-  color: #e7bb58;
-}
-
-
-/* ==========================================
-   SELECTED DAY
-========================================== */
-
-.egtv-selected-day {
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  margin-bottom: 25px;
-}
-
-
-.egtv-selected-day span {
-  color: #e7bb58;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.egtv-selected-day h2 {
-  margin: 5px 0 0;
-
-  font-size: 30px;
-}
-
-
-.egtv-selected-date {
-  color: #81798c;
-
-  font-size: 12px;
-}
-
-
-/* ==========================================
-   FILTERS
-========================================== */
-
-.egtv-filters {
-  display: flex;
-
-  gap: 8px;
-
-  margin-bottom: 35px;
-
-  overflow-x: auto;
-
-  padding-bottom: 5px;
-
-  scrollbar-width: none;
-}
-
-
-.egtv-filters::-webkit-scrollbar {
-  display: none;
-}
-
-
-.egtv-filters button {
-  flex: 0 0 auto;
-
-  padding: 9px 15px;
-
-  border: 1px solid
-    rgba(255,255,255,0.09);
-
-  border-radius: 30px;
-
-  color: #91899b;
-
-  background: transparent;
-
-  cursor: pointer;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-
-  transition: 0.25s ease;
-}
-
-
-.egtv-filters button:hover {
-  color: #fff;
-
-  border-color:
-    rgba(231,187,88,0.3);
-}
-
-
-.egtv-filters button.active {
-  color: #17101f;
-
-  border-color: #e7bb58;
-
-  background: #e7bb58;
-}
-
-
-/* ==========================================
-   MAIN LAYOUT
-========================================== */
-
-.egtv-schedule-layout {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr) 300px;
-
-  gap: 25px;
-
-  align-items: start;
-}
-
-
-/* ==========================================
-   PROGRAM HEADING
-========================================== */
-
-.egtv-program-heading {
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  margin-bottom: 20px;
-}
-
-
-.egtv-program-heading span:first-child {
-  color: #e7bb58;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.egtv-program-heading h2 {
-  margin: 4px 0 0;
-
-  font-size: 28px;
-}
-
-
-.egtv-program-count {
-  color: #706878;
-
-  font-size: 11px;
-}
-
-
-/* ==========================================
+/* ---------------------------------------------------------
    PROGRAM CARD
-========================================== */
+--------------------------------------------------------- */
 
 .egtv-program-card {
-  position: relative;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    min-height: 150px;
 
-  display: grid;
+    background: rgba(33, 19, 41, 0.72);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
 
-  grid-template-columns: 75px 18px minmax(0,1fr) auto;
-
-  gap: 15px;
-
-  align-items: center;
-
-  min-height: 130px;
-
-  margin-bottom: 10px;
-
-  padding: 20px;
-
-  border: 1px solid
-    rgba(255,255,255,0.07);
-
-  border-radius: 17px;
-
-  background:
-    rgba(255,255,255,0.025);
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
-
 
 .egtv-program-card:hover {
-  transform: translateX(5px);
-
-  border-color:
-    rgba(231,187,88,0.28);
-
-  background:
-    rgba(139,82,190,0.06);
+    transform: translateY(-5px);
+    border-color: rgba(231,187,88,0.45);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.35),
+        0 0 30px rgba(139,82,190,0.12);
 }
 
 
-/* CURRENT */
-
-.egtv-program-card.current {
-  border-color:
-    rgba(231,187,88,0.4);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(231,187,88,0.07),
-      rgba(139,82,190,0.04)
-    );
-}
-
-
-.egtv-program-time {
-  display: flex;
-
-  flex-direction: column;
-
-  text-align: right;
-}
-
-
-.egtv-program-time strong {
-  color: #fff;
-
-  font-size: 20px;
-}
-
-
-.egtv-program-time span {
-  color: #81798c;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-}
-
-
-/* TIMELINE */
-
-.egtv-program-line {
-  position: relative;
-
-  align-self: stretch;
-
-  display: flex;
-
-  justify-content: center;
-}
-
-
-.egtv-program-line::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-
-  width: 1px;
-
-  background:
-    rgba(255,255,255,0.08);
-}
-
-
-.egtv-program-line span {
-  position: relative;
-
-  z-index: 1;
-
-  width: 9px;
-  height: 9px;
-
-  margin-top: 20px;
-
-  border-radius: 50%;
-
-  background: #62596c;
-}
-
-
-.current .egtv-program-line span {
-  background: #e7bb58;
-
-  box-shadow:
-    0 0 0 5px rgba(231,187,88,0.1);
-}
-
-
-/* PROGRAM INFO */
-
-.egtv-program-info h3 {
-  margin: 0 0 7px;
-
-  color: #fff;
-
-  font-size: 17px;
-}
-
-
-.egtv-program-info p {
-  max-width: 500px;
-
-  margin: 0 0 10px;
-
-  color: #81798c;
-
-  font-size: 12px;
-
-  line-height: 1.6;
-}
-
-
-.egtv-program-meta {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-}
-
-
-.egtv-program-meta span {
-  padding: 4px 8px;
-
-  border-radius: 5px;
-
-  color: #82798c;
-
-  background:
-    rgba(255,255,255,0.04);
-
-  font-size: 8px;
-
-  font-weight: 700;
-
-  letter-spacing: .5px;
-}
-
-
-.current .egtv-program-status {
-  display: flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  margin-bottom: 6px;
-
-  color: #e7bb58;
-
-  font-size: 8px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-}
-
-
-.egtv-program-status span {
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: #e7bb58;
-}
-
-
-/* ACTION */
-
-.egtv-program-action {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  color: #e7bb58;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-}
-
-
-.egtv-program-action span {
-  font-size: 15px;
-
-  transition: transform .25s ease;
-}
-
-
-.egtv-program-action:hover span {
-  transform: translateX(4px);
-}
-
-
-/* ==========================================
-   SIDEBAR
-========================================== */
-
-.egtv-schedule-sidebar {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 15px;
-}
-
-
-/* NEXT */
-
-.egtv-next-card,
-.egtv-quick-card,
-.egtv-sidebar-live {
-  padding: 25px;
-
-  border: 1px solid
-    rgba(255,255,255,0.08);
-
-  border-radius: 19px;
-
-  background:
-    rgba(255,255,255,0.025);
-}
-
-
-.egtv-sidebar-label {
-  color: #e7bb58;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.egtv-next-time {
-  margin-top: 22px;
-
-  color: #81798c;
-
-  font-size: 11px;
-}
-
-
-.egtv-next-card h3 {
-  margin: 7px 0;
-
-  font-size: 22px;
-}
-
-
-.egtv-next-card p {
-  margin: 0 0 20px;
-
-  color: #81798c;
-
-  font-size: 12px;
-
-  line-height: 1.7;
-}
-
-
-.egtv-next-card a {
-  color: #e7bb58;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-}
-
-
-/* QUICK */
-
-.egtv-quick-card {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 12px;
-}
-
-
-.egtv-quick-row {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding-bottom: 12px;
-
-  border-bottom: 1px solid
-    rgba(255,255,255,0.06);
-}
-
-
-.egtv-quick-row:last-child {
-  padding-bottom: 0;
-
-  border-bottom: 0;
-}
-
-
-.egtv-quick-row strong {
-  color: #fff;
-
-  font-size: 20px;
-}
-
-
-.egtv-quick-row span {
-  color: #81798c;
-
-  font-size: 10px;
-}
-
-
-/* SIDEBAR LIVE */
-
-.egtv-sidebar-live {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(139,82,190,0.13),
-      rgba(231,187,88,0.05)
-    );
-}
-
-
-.egtv-sidebar-live > span {
-  color: #e7bb58;
-
-  font-size: 8px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-}
-
-
-.egtv-sidebar-live h3 {
-  margin: 10px 0 7px;
-
-  font-size: 21px;
-}
-
-
-.egtv-sidebar-live p {
-  margin: 0 0 18px;
-
-  color: #81798c;
-
-  font-size: 11px;
-
-  line-height: 1.7;
-}
-
-
-.egtv-sidebar-live a {
-  color: #e7bb58;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-}
-
-
-/* ==========================================
-   TABLET
-========================================== */
-
-@media (max-width: 950px) {
-
-  .egtv-schedule {
-    padding: 80px 20px;
-  }
-
-  .egtv-schedule-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .egtv-schedule-sidebar {
-    display: grid;
-
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
-
-}
-
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 650px) {
-
-  .egtv-schedule {
-    padding: 65px 15px;
-  }
-
-
-  .egtv-schedule-header {
-    margin-bottom: 35px;
-  }
-
-
-  .egtv-schedule-header h1 {
-    font-size: 38px;
-  }
-
-
-  .egtv-schedule-header p {
-    font-size: 13px;
-  }
-
-
-  /* LIVE */
-
-  .egtv-live-card {
-    min-height: 390px;
-
-    align-items: flex-end;
-  }
-
-
-  .egtv-live-content {
-    padding: 28px 22px;
-  }
-
-
-  .egtv-live-overlay {
-    background:
-      linear-gradient(
-        0deg,
-        rgba(11,7,19,0.97),
-        rgba(11,7,19,0.3)
-      );
-  }
-
-
-  /* DAYS */
-
-  .egtv-day-selector {
+/* ---------------------------------------------------------
+   PROGRAM NAME
+--------------------------------------------------------- */
+
+.egtv-program-name {
+    position: relative;
     display: flex;
-
-    overflow-x: auto;
-
-    padding: 6px;
-
-    scrollbar-width: none;
-  }
-
-
-  .egtv-day-selector::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .egtv-day {
-    flex: 0 0 65px;
-  }
-
-
-  .egtv-day-arrow {
-    display: none;
-  }
-
-
-  /* SELECTED DAY */
-
-  .egtv-selected-day {
-    align-items: flex-start;
-
     flex-direction: column;
+    justify-content: center;
+    padding: 25px;
 
-    gap: 7px;
-  }
+    background: linear-gradient(
+        135deg,
+        rgba(139,82,190,0.17),
+        rgba(33,19,41,0.35)
+    );
 
+    border-right: 1px solid rgba(255,255,255,0.07);
+}
 
-  .egtv-selected-day h2 {
-    font-size: 25px;
-  }
+.program-number {
+    position: absolute;
+    top: 16px;
+    left: 20px;
 
-
-  /* PROGRAM */
-
-  .egtv-program-card {
-    grid-template-columns:
-      55px 12px minmax(0,1fr);
-
-    gap: 10px;
-
-    padding: 17px;
-
-    min-height: 125px;
-  }
-
-
-  .egtv-program-time strong {
-    font-size: 16px;
-  }
-
-
-  .egtv-program-info h3 {
-    font-size: 15px;
-  }
-
-
-  .egtv-program-info p {
     font-size: 11px;
-  }
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(231,187,88,0.55);
+}
+
+.egtv-program-name h3 {
+    margin: 20px 0 0;
+
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #fff;
+}
 
 
-  .egtv-program-action {
-    display: none;
-  }
+/* ---------------------------------------------------------
+   TIMES
+--------------------------------------------------------- */
 
+.egtv-program-times {
+    padding: 12px 20px;
+}
 
-  /* SIDEBAR */
-
-  .egtv-schedule-sidebar {
+.schedule-row {
     display: flex;
-  }
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    min-height: 36px;
+    padding: 6px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-row span {
+    font-size: 13px;
+    color: rgba(255,255,255,0.68);
+}
+
+.schedule-row strong {
+    font-size: 12px;
+    font-weight: 600;
+    color: #e7bb58;
+    text-align: right;
+    white-space: nowrap;
+}
 
 
-  .egtv-next-card,
-  .egtv-quick-card,
-  .egtv-sidebar-live {
-    padding: 22px;
-  }
+/* =========================================================
+   TABLET
+========================================================= */
 
+@media (max-width: 1000px) {
+
+    .egtv-schedule-section {
+        padding: 85px 18px;
+    }
+
+    .egtv-schedule-grid {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .egtv-program-card {
+        grid-template-columns: 220px 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .egtv-schedule-section {
+        padding: 70px 14px;
+    }
+
+    .egtv-schedule-heading {
+        margin-bottom: 40px;
+    }
+
+    .egtv-schedule-heading span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .egtv-schedule-heading h2 {
+        font-size: 36px;
+    }
+
+    .egtv-schedule-heading p {
+        font-size: 14px;
+    }
+
+    .egtv-program-card {
+        display: block;
+    }
+
+    .egtv-program-name {
+        min-height: 95px;
+        padding: 22px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .egtv-program-name h3 {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+
+    .egtv-program-times {
+        padding: 12px 20px;
+    }
+
+    .schedule-row {
+        min-height: 42px;
+    }
+
+    .schedule-row span {
+        font-size: 13px;
+    }
+
+    .schedule-row strong {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .egtv-schedule-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .egtv-program-times {
+        padding: 10px 15px;
+    }
+
+    .schedule-row {
+        gap: 8px;
+    }
+
+    .schedule-row span {
+        font-size: 12px;
+    }
+
+    .schedule-row strong {
+        font-size: 10px;
+    }
 }
 
 /* ==========================================
@@ -7311,5 +6470,42 @@ min-height: 100vh;
     .egtv-privacy-contact a {
         width: 100%;
         justify-content: center;
+    }
+}
+
+.preloaders {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient( circle at 85% 20%, rgba(139, 82, 190, 0.16), transparent 35% ), radial-gradient( circle at 10% 85%, rgba(231, 187, 88, 0.08), transparent 30% ), #0d0918;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloaders.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.logo-loader {
+    width: 250px;
+    height: auto;
+    animation: zoom 1.5s infinite ease-in-out;
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
     }
 }
