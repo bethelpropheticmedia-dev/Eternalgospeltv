@@ -6479,14 +6479,20 @@ min-height: 100vh;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: radial-gradient( circle at 85% 20%, rgba(139, 82, 190, 0.16), transparent 35% ), radial-gradient( circle at 10% 85%, rgba(231, 187, 88, 0.08), transparent 30% ), #0d0918;
+
+    background:
+        radial-gradient(circle at 85% 20%, rgba(139, 82, 190, 0.16), transparent 35%),
+        radial-gradient(circle at 10% 85%, rgba(231, 187, 88, 0.08), transparent 30%),
+        #0d0918;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: 9999;
+
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .preloaders.hide {
@@ -6498,14 +6504,5 @@ min-height: 100vh;
 .logo-loader {
     width: 250px;
     height: auto;
-    animation: zoom 1.5s infinite ease-in-out;
 }
 
-@keyframes zoom {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.08);
-    }
-}
