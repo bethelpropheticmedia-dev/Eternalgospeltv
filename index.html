@@ -22,6 +22,27 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+      <script>
+window.addEventListener("load", function () {
+
+    const preloader = document.querySelector(".preloaders");
+
+    setTimeout(function () {
+
+        preloader.classList.add("hide");
+
+        setTimeout(function () {
+            preloader.style.display = "none";
+        }, 500);
+
+    }, 1000);
+
+});
+</script>
+        <!-- START PRELOADER -->
+	<div class="preloaders">
+    <img src="assets/images/logo.png" alt="Logo" class="logo-loader">
+</div>
         <header class="bar">
             <div class="row">
                 
